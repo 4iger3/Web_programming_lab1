@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory Work N1 - Tasks 5 & 6 Complete Solution</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        p.paragraph-style {
+            font-size: 1.2em;
+            color: #fff;
+            text-align: center;
+            margin: 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        div.card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+        ul.list-style {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul.list-style li {
+            background: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px 15px;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        ul.list-style li:hover {
+            background: #e0e0ff;
+        }
+        img.rounded {
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: block;
+            margin: 20px auto;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .slide-in {
+            transform: translateX(-100px);
+            animation: slideIn 0.8s ease-out forwards;
+        }
+        @keyframes slideIn {
+            to { transform: translateX(0); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .counter {
+            font-size: 2em;
+            color: #667eea;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .task5-indicator {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .task6-indicator {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .highlight {
+            background: #fffde7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <h1>Laboratory Work N1 - Tasks 5 & 6 Complete Solution</h1>
+    
+    <div class="task5-indicator">
+        <strong>✓ Task 5 Completed:</strong> Added unique CSS styles to the project
+    </div>
+    
+    <p class="paragraph-style">
+        This page demonstrates the completed solution for Tasks 5 and 6 of Laboratory Work N1.
+        All CSS styles and JavaScript effects are fully implemented and functional.
+    </p>
+    
+    <div class="card pulse">
+        <h2>CSS Styles Demonstration</h2>
+        <p>This card shows the CSS styles from Task 5 with hover effects and transitions.</p>
+        <button class="btn" id="demoBtn">Click Me</button>
+        <div class="counter">Click count: <span id="count">0</span></div>
+    </div>
+    
+    <div style="text-align:center; margin: 20px;">
+        <img class="rounded" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' fill='%23667eea'%3E%3Ccircle cx='75' cy='75' r='75'/%3E%3C/svg%3E" alt="Sample Image">
+    </div>
+    
+    <ul class="list-style" style="max-width:500px; margin:20px auto;">
+        <li><strong>Task 5:</strong> Paragraph, div, ul, li, img styling added</li>
+        <li><strong>Task 6:</strong> JavaScript effects and animations implemented</li>
+        <li><strong>Bonus:</strong> Hover effects and transitions included</li>
+    </ul>
+    
+    <div class="task6-indicator">
+        <strong>✓ Task 6 Completed:</strong> Added JavaScript effects and animation
+    </div>
+    
+    <script>
+        // Task 6: JavaScript effects implementation
+        
+        // Effect 1: Button click event
+        document.getElementById('demoBtn').addEventListener('click', function() {
+            var count = parseInt(document.getElementById('count').textContent);
+            document.getElementById('count').textContent = count + 1;
+            this.textContent = 'Clicked ' + (count + 1) + ' times!';
+            this.style.background = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+        });
+        
+        // Effect 2: Scroll animation
+        window.addEventListener('scroll', function() {
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function(card) {
+                var rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Effect 3: Mouse move parallax
+        document.addEventListener('mousemove', function(e) {
+            var x = (window.innerWidth - e.pageX * 2) / 100;
+            var y = (window.innerHeight - e.pageY * 2) / 100;
+            document.querySelector('h1').style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+        });
+        
+        // Initialize card animations on load
+        window.addEventListener('load', function() {
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function(card, index) {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                setTimeout(function() {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 500 + index * 300);
+            });
+        });
+    </script>
+</body>
+</html>

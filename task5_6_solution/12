@@ -1,0 +1,119 @@
+Task 2. Create New Web App Project (using Node.js with Express.js)
+
+Create a new folder (at the place you want to keep your project). 
+
+Note: You may use ANY known method to create your own package and it’s not limited to express.js. Use any appropriate tools.
+
+Please follow this guide, but replace project name with your own one:
+https://javascript.plainenglish.io/create-a-single-page-website-using-node-js-and-express-js-a0b53e396e4f
+
+In our example let’s call project: node-lab-website
+
+Create two files inside node-lab-website folder:
+→ package.json file.
+→ server.js file.
+
+Create a folder (name: express) and a file inside node-lab-website/express folder:
+→ node-lab-website/express/index.html file.
+
+Open up and update your node-lab-website/package.json file with below code:
+
+{
+    "name": "node-lab-website",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
+
+Open up and update your node-lab-website/server.js file with below code:
+
+const http = require('http');
+const express = require('express');
+const path = require('path');const app = express();
+app.use(express.json());
+app.use(express.static("express"));// default URL for website
+app.use('/', function(req,res){
+    res.sendFile(path.join(__dirname+'/express/index.html'));
+    //__dirname : It will resolve to your project folder.
+  });const server = http.createServer(app);
+const port = 3000;
+server.listen(port);console.debug('Server listening on port ' + port);
+
+After creating above two files, open your terminal in the "node-lab-website" folder and run this command:
+
+npm install
+
+This command ↑ will install the dependencies defined in "package.json" file.
+
+After dependency installation this will create "node_modules" folder at the root of the "node-lab-website" folder.
+
+Please create screenshot with folder node_modules and node-lab-website folder contents.
+
+Task 3. Add design template to your Web App.
+
+Replace your → node-lab-website/express/index.html file with code below, or you may use your own template.
+
+You may also add all your static files inside express folder like…
+→node-lab-website/express/css and node-ex-website/express/js
+
+Code with template example is located in the Laboratory Work Task in the following file: lab1_index.html.
+
+You can use this code, but please rename it to index.html.
+
+Provide screenshot of index.html contents from the package structure, with project tree open in your code editor.
+
+Paste screenshot here:
+
+
+Task 4. Run Project.
+
+
+To start a server run this command in terminal:
+npm start
+To test this API — Open your web browser and enter this URL → localhost:3000
+
+Please make a screenshot of the result and paste it here:
+
+
+
+Task 5. Add your unique CSS style to the project.
+
+TODO:
+1. Add at least one paragraph style.
+2. Add or change styles for two tags. Ideas for the change: div, ul, li, img
+
+Note: you can use SASS to minimize coding effort in CSS.
+
+Run project once again.
+
+To run package manager:
+
+npm start
+To test this API — Open your web browser and enter this URL → localhost:3000
+
+Please make a screenshot of the result with updated CSS and paste it here:
+
+Task 6. Add Javascript effects and animation
+
+TODO:
+1. Add at 3 different JS effects to your website and use at least one event condition.
+Note: You can use jQuery
+2. Add at least one animation to the page.
+
+Note: you can use SASS to minimize coding effort in CSS.
+
+Run project once again.
+
+That’s it! We’re close to the finish
+
+To run package manager:
+
+npm start
+To test this API — Open your web browser and enter this URL → localhost:3000
+
+Please make a screenshot of the result with JS effects and paste it here:

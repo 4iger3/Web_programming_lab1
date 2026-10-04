@@ -1,0 +1,4 @@
+=== TASK 1: terminal output ===
+v24.21.0
+11.19.0
+DONE

@@ -1,0 +1,9 @@
+{
+  "name": "node-lab-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Solution for laboratory work tasks 5 and 6",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

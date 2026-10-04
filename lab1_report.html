@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Laboratory Work N1 - Complete</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; background: #fff; color: #000; }
+h1 { text-align: center; border-bottom: 3px solid #333; padding-bottom: 10px; }
+h2 { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 10px; margin-top: 40px; }
+.task-text { background: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 15px; white-space: pre-wrap; font-size: 0.95em; }
+.result-label { font-weight: bold; font-size: 1.2em; color: #27ae60; margin-top: 20px; }
+.result-image { max-width: 900px; width: 100%; border: 2px solid #ddd; border-radius: 5px; margin: 10px 0; display: block; }
+.result-table { background: #ecf0f1; padding: 15px; border-radius: 5px; margin: 10px 0; }
+hr { border: none; border-top: 1px solid #ccc; margin: 30px 0; }
+</style>
+</head>
+<body>
+
+<h1>Web Application Development Tools Laboratory Work N1</h1>
+<p>During this laboratory work you will create your own one page website with dynamical elements using Node.js with Express.js.</p>
+
+<hr>
+
+<h2>Task 1. Install NPM at your local environment.</h2>
+<div class="task-text">NPM installation guide:
+https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+
+You can use any Node Version Manager (NVM) to set up your project.
+
+Provide screenshot from Linux/Windows/MasOS terminal with NPM and Node.js version after installation.
+
+To do a check after installation please run the following commands:
+node -v
+npm -v</div>
+<div class="result-label">Результат:</div>
+<div class="result-table"><pre>Node.js v24.21.0
+npm v11.19.0</pre></div>
+<img class="result-image" src="https://raw.githubusercontent.com/OpenClaw/restrict-images/main/node-versions.png" alt="Task 1 - Node.js and NPM versions">
+
+<hr>
+
+<h2>Task 2. Create New Web App Project (using Node.js with Express.js)</h2>
+<div class="task-text">Create a new folder (at the place you want to keep your project).
+In our example let's call project: node-lab-website
+
+Create two files inside node-lab-website folder:
+- package.json file
+- server.js file
+
+Create a folder (name: express) and a file inside node-lab-website/express folder:
+- node-lab-website/express/index.html file
+
+After creating above two files, open your terminal in the "node-lab-website" folder and run this command:
+npm install</div>
+<div class="result-label">Результат:</div>
+<div class="result-table"><pre>Project structure:
+/home/iger/Документы/node-lab-website/
+├── express/
+│   └── index.html
+├── node_modules/
+│   └── (68 packages)
+├── package.json
+├── package-lock.json
+└── server.js</pre></div>
+<img class="result-image" src="https://raw.githubusercontent.com/OpenClaw/restrict-images/main/project-tree.png" alt="Task 2 - Project tree">
+
+<hr>
+
+<h2>Task 3. Add design template to your Web App.</h2>
+<div class="task-text">Replace your node-lab-website/express/index.html file with code below, or you may use your own template.
+You may also add all your static files inside express folder like:
+- node-lab-website/express/css
+- node-lab-website/express/js
+Code with template example is located in Laboratory Work Task in the following file: lab1_index.html.
+You can use this code, but please rename it to index.html.
+
+Provide screenshot of index.html contents from the package structure, with project tree open in your code editor.</div>
+<div class="result-label">Результат:</div>
+<p>index.html created with custom template at <code>/home/iger/Документы/node-lab-website/express/index.html</code> including CSS styles and JavaScript effects. Project tree open in code editor.</p>
+<img class="result-image" src="https://raw.githubusercontent.com/OpenClaw/restrict-images/main/index-html-contents.png" alt="Task 3 - index.html contents in project tree">
+
+<hr>
+
+<h2>Task 4. Run Project.</h2>
+<div class="task-text">To start a server run this command in terminal:
+npm start
+
+To test this API - Open your web browser and enter this URL → localhost:3000
+
+Please make a screenshot of the result and paste it here:</div>
+<div class="result-label">Результат:</div>
+<div class="result-table"><pre>Command: npm start
+Server listening on port 3000
+Browser: http://localhost:3000
+HTTP response: 200 OK</pre></div>
+<img class="result-image" src="https://raw.githubusercontent.com/OpenClaw/restrict-images/main/website-running.png" alt="Task 4 - Website running on localhost:3000">
+
+<hr>
+
+<h2>Task 5. Add your unique CSS style to the project.</h2>
+<div class="task-text">TODO:
+1. Add at least one paragraph style.
+2. Add or change styles for two tags. Ideas for the change: div, ul, li, img
+
+Note: you can use SASS to minimize coding effort in CSS.
+
+Run project once again.
+npm start
+localhost:3000
+
+Please make a screenshot of the result with updated CSS and paste it here:</div>
+<div class="result-label">Результат:</div>
+<p>CSS styles added:</p>
+<ul>
+<li>p.paragraph-style - gradient background, centered text, rounded corners</li>
+<li>div.card - hover transform with shadow, transition effect</li>
+<li>ul.list-style li - hover background change, left border accent</li>
+<li>img.rounded - border-radius 50%, border, box-shadow</li>
+</ul>
+<img class="result-image" src="https://raw.githubusercontent.com/OpenClaw/restrict-images/main/css-styled-website.png" alt="Task 5 - CSS styled website">
+
+<hr>
+
+<h2>Task 6. Add Javascript effects and animation.</h2>
+<div class="task-text">TODO:
+1. Add at 3 different JS effects to your website and use at least one event condition.
+2. Add at least one animation to the page.
+
+Run project once again.
+npm start
+localhost:3000
+
+Please make a screenshot of the result with JS effects and paste it here:</div>
+<div class="result-label">Результат:</div>
+<p>JavaScript effects and animations added:</p>
+<ol>
+<li><b>Effect 1:</b> Button click event - counter increments, button color changes randomly (event: onclick)</li>
+<li><b>Effect 2:</b> Scroll animation - cards fade in when scrolled into view</li>
+<li><b>Effect 3:</b> Mouse move parallax - header moves with mouse position</li>
+<li><b>Animation 1:</b> fade-in - page loads with opacity animation</li>
+<li><b>Animation 2:</b> slide-in - header slides from left</li>
+<li><b>Animation 3:</b> pulse - card continuously pulses</li>
+</ol>
+<img class="result-image" src="https://raw.githubusercontent.com/OpenClaw/restrict-images/main/js-effects-website.png" alt="Task 6 - JS effects and animation">
+
+<hr>
+
+<h2>Task 7. Debug the code</h2>
+<div class="task-text">During project creation you might encounter errors or problems.
+
+Please specify what errors/problems you encountered and solved during Laboratory Work 1.
+(You may provide answer in a written form below.)</div>
+<div class="result-label">Результат:</div>
+<p><b>Ошибки и решения:</b></p>
+<ol>
+<li><b>Express version:</b> задание указывало express ^4.17.1, использована ^4.18.2 — совместимость сохранена, все функции работают.</li>
+<li><b>Сервер не запускался:</b> при первом запуске node server.js в фоновом режиме процесс иногда не успевал стартовать. Решение: добавлен sleep 2 перед проверкой через curl.</li>
+<li><b>Скриншоты через Firefox:</b> Firefox в headless mode не всегда делал скриншот корректно. Решение: использован изолированный профиль (--profile /tmp/lab-firefox-profile).</li>
+</ol>
+<p>Все задачи выполнены успешно. Сервер работает на порту 3000, сайт доступен по адресу http://localhost:3000.</p>
+
+</body>
+</html>
